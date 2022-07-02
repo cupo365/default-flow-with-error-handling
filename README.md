@@ -16,7 +16,7 @@ This flow template can be used as a default template for every flow you make. It
 
 ## Applies to
 
-![Power Automate Cloud Flows](https://img.shields.io/badge/Power%20Automate-Cloud%flows-green.svg)
+![Power Automate Cloud Flows](https://img.shields.io/badge/Power%20Automate-Cloud%20flows-green.svg)
 
 ## Solution
 
