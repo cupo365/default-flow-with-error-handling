@@ -41,7 +41,8 @@ This flow template can be used as a default template for every flow you make. It
    ![Try scope overview](resources/try-scope-overview.png "Try scope overview")
 5. Append every container action inside your flow to the filter in the catch-scope (see screenshot below). Container actions can disguise errors within them. Therefore, each container action should be added to the 'From' formula in the filter results action in the catch-scope. By default, all existing container actions are already added to the default formula. The formula is ```union(coalesce(result('Scope_-_Try'), createArray(null)), coalesce(result('Scope_-_Prepare'), createArray(null)))```. To add an action to this formula, simply add ```coalesce(result('{NAME_OF_CONTAINER_ACTION}'), createArray(null))```. Container actions are: scopes, conditions, switches, apply to eaches and do untils.
    ![Catch filter results action](resources/filter-results-action.png "Catch filter results action")
-6. To allow the flow to notify an observer in case of an erorr: add an email action in the catch-scope if needed. To avoid the flow having connections, an email action (or any other notification for that matter) is not included, but you can add it yourself to the last condition of the catch-scope. This condition already contains a compose action with proposed input.
+6. To allow the flow to notify an observer in case of an erorr: add an email action in the catch-scope if needed. To avoid the flow having connections, an email action (or any other notification for that matter) is not included, but you can add it yourself to the last condition of the catch-scope. This condition already contains a compose action with proposed input. An example of an email with this input looks like this:
+   ![Error notification example](resources/error-notification-example.png "Error notification exammple")
 7. Enjoy :)
 ## Download the flow ZIP package
 
